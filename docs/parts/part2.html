@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>Exercise 2: Working with mutable and immutable values in the REPL</title>
+    <link rel="stylesheet" type="text/css" href="./res/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./res/styles/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="./res/styles/styles.css">
+</head>
+
+<body>
+    <!-- Use the same title as the index -->
+    <header>Introduction to F#</header>
+
+    <section id="main">
+
+        <h1 id="page-title"></h1>
+        <h2>Duration</h2>
+        <p>10 minutes</p>
+
+        <h2>Lab Goals</h2>
+        <p>The primary goal of this lab will be to gain a deeper understanding of <a href="http://fsharpforfunandprofit.com/posts/correctness-immutability/" target="_blank">mutable and immutable values</a>. 
+        </p>
+
+        <h1>Steps</h1>
+        <h2>F# is immutable by default</h2>
+        <ol>
+            <li>Make sure your REPL window is open and visible, and reset it if you are continuing from the prior exercise in order to clear existing values.
+            </li>
+            <li>Create a value <code>x</code> using the <code>let</code> keyword, and assign something to it (anything will do). </li>
+            <li>Use the assignment operator "<b>&lt;-</b>" and try to change the value of <code>x</code> to something else. What happened? Why?</li>
+        </ol>
+        <h2>Working with mutable types</h2>
+        <p>In the prior exercise, you appeared to change a value through the <code>let</code> keyword. However, when you issued the second <code>let</code> statement, you really <em>created</em> a new value in memory. In this part we will <em>change</em> the value.</p>
+        <ol>
+            <li>Create a <em>mutable</em> value, <code>y</code>, and assign something to it.</li>
+               <pre class="prettyprint">let mutable y = 10;;</pre></li>
+            <li>What happens when you change the value of <code>y</code> with the assignment operator?</li>
+        </ol>
+
+        <h2>Work with different F# types</h2>
+        <ol>
+            <li>Reset the REPL.</li>
+            <li>Explore some of the <a href="http://msdn.microsoft.com/en-us/library/dd233210.aspx" target="_blank">other values you can create</a> such as <code>string</code>s, <code>double</code>s and <code>boolean</code>s. Remember that the type is <em>inferred</em> based on the value being assigned.</li>
+            <li>Output your values with <code>printfn</code> using a format string
+                <ul>
+                    <li>Remember that it does not use index placeholder values (such as <code>{0}, {1}</code>), but instead has <a href="http://msdn.microsoft.com/en-us/library/ee370560.aspx" target="_blank">unique identifiers for the types</a> - %s for strings, %i for integers, etc.</li>
+                    <li>Also, remember we use <em>spaces</em> to separate parameters.</li>
+                </ul> 
+                Here's an example:
+               <pre class="prettyprint">
+let num = 10
+let text = "Hello"
+let bestVal = 42.0
+let flag = true
+printfn "The values are: %i, %s, %.2f, and %b" num text bestVal flag;;</pre></li>
+        </ol>
+        <div class="hintblock"><strong>Note:</strong> when entering multiple statements into the REPL, you can put the terminating double-semicolon at the end of the final statement.</div>
+
+         <h2>Performing mathematical operations</h2>
+         <ol>
+            <li>Reset your REPL.</li>
+            <li>Assign two integer values.
+               <pre class="prettyprint">let x = 10
+let y = 20;;</pre></li>
+            <li>Add the two numbers together - you can just type the expression into the REPL, or assign it to a new value if you prefer, either will work.
+               <pre class="prettyprint">x + y</pre></li>
+            <li>Create a third <code>float</code> value and attempt to add it to one of the integers. What happens?
+               <pre class="prettyprint">let z = 42.0
+x + z;;</pre></li>
+            <li>The numbers are not the same type, and therefore cannot be manipulated together - however we <em>can</em> turn either one into the other type. F# has <em>functions</em> which performs basic casting. For example, you can turn your first number into a float:
+               <pre class="prettyprint">float x + z;;</pre></li>
+            <li>Or turn the second number into an integer.
+               <pre class="prettyprint">x + int z;;</pre></li>
+            <li>Try some other <a href="http://msdn.microsoft.com/en-us/library/dd469493.aspx" target="_blank">F# math operators</a> to play with the REPL.</li></ol>
+
+
+        <h1>Summary</h1>
+        In this lab, we have begun to work with mutable and immutable values and used some of the math operators.
+        <br />
+        <div class="align-right">
+            <a href="../index.html">Go Back</a>
+        </div>
+    </section>
+
+    <script src="./res/js/jquery.min.js"></script>
+    <script src="./res/js/prettify.js"></script>
+    <script src="./res/js/script.js"></script>
+
+    <footer>Copyright (C) 2018 Xamarin Inc., Microsoft.</footer>
+</body>
+</html>

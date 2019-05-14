@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+    <title>Exercise 1: Discover the REPL</title>
+    <link rel="stylesheet" type="text/css" href="./res/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./res/styles/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="./res/styles/styles.css">
+</head>
+
+<body>
+    <!-- Use the same title as the index -->
+    <header>Introduction to F#</header>
+
+    <section id="main">
+
+        <h1 id="page-title"></h1>
+        <h2>Duration</h2>
+        <p>5 minutes</p>
+
+        <h2>Lab Goals</h2>
+        <p>The primary goal of this lab will be to interact with the REPL (Read-Evaluate-Print-Loop) and experiement with assigning values and printing strings. 
+        </p>
+
+        <div class="hintblock">
+            <strong>Tip:</strong> If you are doing this exercise live in a session, make sure to make good use of the instructor, they are online to answer any questions you have!</div>
+
+        <h1>Steps</h1>
+        <h2>Setup</h2>
+        <ol>
+            <li>Open Visual Studio.</li>
+            <li>Open the REPL window in your IDE
+                <ul class="indent-none">
+                    <li><strong>Visual Studio for Mac</strong> - View > Pads > F# Interactive</li>
+                    <li><strong>Visual Studio on Windows</strong> - View > F# Interactive</li>
+                </ul>
+            </li>
+        </ol>
+        <img src="./res/images/fsharp-REPL.png" />
+
+        <h2>Assigning Values</h2>
+        <ol>
+            <li>Enter the following into your REPL (remember to use a double-semicolon to terminate the REPL input in the window). What happens? You can check out all the <a href="http://msdn.microsoft.com/en-us/library/ee370560.aspx">format specifiers for printfn</a> on MSDN.
+                <pre class="prettyprint">printfn "hello world";;</pre></li>
+            <li>Next, enter the following statement into your REPL. What happens?
+                <pre class="prettyprint">let x = 42;;</pre></li>
+            <li>Try to change value you just assigned. Does it work? Was that value immutable?
+               <pre class="prettyprint">let x = 10;;</pre></li>
+       </ol>
+
+
+        <h2>Summary</h2>
+        <p>
+        In this lab, we have opened the REPL and begun to interact with it.
+        </p>
+
+        <div class="align-right">
+            <a href="../index.html">Go Back</a>
+        </div>
+    </section>
+
+    <script src="./res/js/jquery.min.js"></script>
+    <script src="./res/js/prettify.js"></script>
+    <script src="./res/js/script.js"></script>
+
+    <footer>Copyright (C) 2018 Xamarin Inc., Microsoft.</footer>
+</body>
+</html>
